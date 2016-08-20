@@ -21,12 +21,12 @@ end
 
 local publicFn1 = function()
   privFn1()
-  print( str + " 1" )
+  print( str .. " 1" )
 end
 
 local publicFn2 = function()
   privFn1()
-  print( str + " 2" )
+  print( str .. " 2" )
 end
 
 --
