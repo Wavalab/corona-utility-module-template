@@ -2,37 +2,45 @@
 -- Utility Module
 --
 
+-- require modules here
 local M = {}
--- include require statements here
+
+
 
 --
 -- Private variables
 --
 
-local str
+local foo
+
+
 
 --
 -- Private functions
 --
 
-local privFn1 = function()
-  str = "Test"
+local moo = function()
+  print("I am a private function!")
 end
 
-local publicFn1 = function()
-  privFn1()
-  print( str .. " 1" )
-end
 
-local publicFn2 = function()
-  privFn1()
-  print( str .. " 2" )
-end
 
 --
--- Expose module API
+-- Public functions
 --
 
-M.test1 = publicFn1
-M.test2 = publicFn2
+M.bar = function()
+  print("I am public function!")
+end
+
+M.baz = function()
+  print("I am public function too!")
+end
+
+
+
+--
+-- End
+--
+
 return M
